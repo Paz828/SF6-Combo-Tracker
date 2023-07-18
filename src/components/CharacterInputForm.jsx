@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-const InputForm = ({
+const CharacterInputForm = ({
   bringUpNewCharacterForm,
   url,
   updateAfterAdd,
@@ -80,4 +80,4 @@ const InputForm = ({
   );
 };
 
-export default InputForm;
+export default CharacterInputForm;

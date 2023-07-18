@@ -1,6 +1,6 @@
 import Character from "./Character";
 import AddCharacter from "./AddCharacter";
-import InputForm from "./InputForm";
+import CharacterInputForm from "./CharacterInputForm";
 import { useState } from "react";
 import GoBack from "./GoBack";
 
@@ -15,7 +15,6 @@ const Characters = ({
 }) => {
   const [newCharacter, setNewCharacter] = useState(false);
   const [updateCharacter, setUpdateCharacter] = useState(false);
-
   const bringUpNewCharacterForm = () => {
     setNewCharacter(!newCharacter);
   };
@@ -24,10 +23,18 @@ const Characters = ({
     setUpdateCharacter(!updateCharacter);
   };
 
+  const resetCharacterState = (cheat) => {
+    if (!cheat) {
+      setNewCharacter(false);
+      setUpdateCharacter(false);
+    }
+  };
+
   if (newCharacter || updateCharacter) {
     return (
       <div>
-        <InputForm
+        <GoBack focusOn={resetCharacterState} />
+        <CharacterInputForm
           focus={focus}
           focusOn={focusOn}
           updateAfterUpdate={updateAfterUpdate}

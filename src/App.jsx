@@ -8,7 +8,7 @@ function App() {
     currentCharacter: "",
     currentImg: "",
   });
-  const [charactersList, setcharactersList] = useState([]);
+  const [charactersList, setCharactersList] = useState([]);
 
   const URL = "https://sf6-combo-tracker.onrender.com";
 
@@ -21,7 +21,7 @@ function App() {
       try {
         const charResponse = await axios.get(URL + "/characters");
 
-        setcharactersList(charResponse.data);
+        setCharactersList(charResponse.data);
       } catch (err) {
         console.error(err);
       }
@@ -37,13 +37,13 @@ function App() {
         copyArr.splice(i, 1);
       }
     }
-    setcharactersList(copyArr);
+    setCharactersList(copyArr);
   };
 
   const updateAfterAdd = (obj) => {
     const copyArr = charactersList.slice(0);
     copyArr.push(obj);
-    setcharactersList(copyArr);
+    setCharactersList(copyArr);
   };
 
   const updateAfterUpdate = (obj) => {
@@ -53,7 +53,7 @@ function App() {
         copyArr.splice(i, 1, obj);
       }
     }
-    setcharactersList(copyArr);
+    setCharactersList(copyArr);
   };
 
   return (
