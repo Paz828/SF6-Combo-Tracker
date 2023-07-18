@@ -10,7 +10,7 @@ function App() {
   });
   const [charactersList, setcharactersList] = useState([]);
 
-  const URL = "http://localhost:4000";
+  const URL = "https://sf6-combo-tracker.onrender.com/";
 
   const focusOn = (id, character, img) => {
     setIsFocus({ currentCharacter: character, currentId: id, currentImg: img });
