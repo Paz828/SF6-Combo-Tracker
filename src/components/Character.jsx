@@ -22,20 +22,20 @@ const Character = ({
           <div>
             <img src={focus.currentImg} />
           </div>
-          <div className="focus-character-btns">
-            <UpdateCharacter
-              bringUpUpdateForm={bringUpUpdateForm}
-              focus={focus}
-              url={url}
-              focusOn={focusOn}
-            />
-            <DeleteCharacter
-              url={url}
-              updateAfterDelete={updateAfterDelete}
-              focus={focus}
-              focusOn={focusOn}
-            />
-          </div>
+          {/* <div className="focus-character-btns"> */}
+          <UpdateCharacter
+            bringUpUpdateForm={bringUpUpdateForm}
+            focus={focus}
+            url={url}
+            focusOn={focusOn}
+          />
+          <DeleteCharacter
+            url={url}
+            updateAfterDelete={updateAfterDelete}
+            focus={focus}
+            focusOn={focusOn}
+          />
+          {/* </div> */}
         </div>
         <div>
           <Combos url={url} currentId={focus.currentId} />
