@@ -21,9 +21,9 @@ const CombosItem = ({
   if (currentId === combo.char_id) {
     return (
       <div>
-        <p>{combo.combo_inputs}</p>
-        <p>{combo.combo_dmg}</p>
-        <p>{combo.combo_resources}</p>
+        <p>Inputs: {combo.combo_inputs}</p>
+        <p>Damage: {combo.combo_dmg}</p>
+        <p>Resources: {combo.combo_resources}</p>
         <UpdateCombo
           setComboFormData={setComboFormData}
           fillComboForm={fillComboForm}

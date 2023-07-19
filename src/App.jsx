@@ -57,8 +57,10 @@ function App() {
   };
 
   return (
-    <div>
-      <h1>PlaceHolder Title</h1>
+    <div className="container">
+      <header>
+        <h1>Street Fighter 6 Combo Tracker</h1>
+      </header>
       <Characters
         focus={isFocus}
         updateAfterDelete={updateAfterDelete}

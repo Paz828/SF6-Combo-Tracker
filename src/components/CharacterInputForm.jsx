@@ -16,6 +16,20 @@ const CharacterInputForm = ({
     char_img: "",
   });
 
+  const changePreview = (e) => {
+    switch (e.target.className) {
+      case "":
+        e.target.className = "pic";
+        e.target.parentNode.className += ", square";
+        break;
+
+      default:
+        e.target.className = "";
+        e.target.parentNode.className = "preview-pic";
+        break;
+    }
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
@@ -59,23 +73,30 @@ const CharacterInputForm = ({
 
   return (
     <div>
-      <form action="characters" onSubmit={handleSubmit}>
-        <label htmlFor="char_name">Character Name</label>
-        <input
-          type="text"
-          name="char_name"
-          value={formData.char_name}
-          onChange={handleChange}
-        />
-        <label htmlFor="char_img">Character Image URL</label>
-        <input
-          type="text"
-          name="char_img"
-          value={formData.char_img}
-          onChange={handleChange}
-        />
-        <input type="submit" value={value} />
-      </form>
+      <div>
+        <form action="characters" onSubmit={handleSubmit}>
+          <label htmlFor="char_name">Character Name</label>
+          <input
+            type="text"
+            name="char_name"
+            value={formData.char_name}
+            onChange={handleChange}
+          />
+          <label htmlFor="char_img">Character Image URL</label>
+          <input
+            type="text"
+            name="char_img"
+            value={formData.char_img}
+            onChange={handleChange}
+          />
+          <input type="submit" value={value} />
+        </form>
+      </div>
+      <div className="preview-container">
+        <div className="preview-pic">
+          <img className="" src={formData.char_img} onClick={changePreview} />
+        </div>
+      </div>
     </div>
   );
 };

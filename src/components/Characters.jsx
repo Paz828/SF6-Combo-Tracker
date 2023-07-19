@@ -32,8 +32,10 @@ const Characters = ({
 
   if (newCharacter || updateCharacter) {
     return (
-      <div>
-        <GoBack focusOn={resetCharacterState} />
+      <div className="input-container">
+        <div>
+          <GoBack focusOn={resetCharacterState} />
+        </div>
         <CharacterInputForm
           focus={focus}
           focusOn={focusOn}
@@ -64,7 +66,7 @@ const Characters = ({
     );
   } else {
     return (
-      <div>
+      <div className="characters">
         {charactersList.map((char) => (
           <Character
             focus={focus}
@@ -74,7 +76,9 @@ const Characters = ({
             key={char.char_id}
           />
         ))}
-        <AddCharacter bringUpNewCharacterForm={bringUpNewCharacterForm} />
+        <footer>
+          <AddCharacter bringUpNewCharacterForm={bringUpNewCharacterForm} />
+        </footer>
       </div>
     );
   }

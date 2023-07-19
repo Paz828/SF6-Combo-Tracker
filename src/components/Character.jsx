@@ -17,26 +17,37 @@ const Character = ({
   if (focus.currentCharacter) {
     return (
       <div>
-        {focus.currentCharacter}
-        <Combos url={url} currentId={focus.currentId} />
-        <UpdateCharacter
-          bringUpUpdateForm={bringUpUpdateForm}
-          focus={focus}
-          url={url}
-          focusOn={focusOn}
-        />
-        <DeleteCharacter
-          url={url}
-          updateAfterDelete={updateAfterDelete}
-          focus={focus}
-          focusOn={focusOn}
-        />
+        <div>
+          {focus.currentCharacter}
+          <div>
+            <img src={focus.currentImg} />
+          </div>
+          <div>
+            <UpdateCharacter
+              bringUpUpdateForm={bringUpUpdateForm}
+              focus={focus}
+              url={url}
+              focusOn={focusOn}
+            />
+            <DeleteCharacter
+              url={url}
+              updateAfterDelete={updateAfterDelete}
+              focus={focus}
+              focusOn={focusOn}
+            />
+          </div>
+        </div>
+        <div>
+          <Combos url={url} currentId={focus.currentId} />
+        </div>
       </div>
     );
   } else {
     return (
-      <div onClick={handleClick}>
-        {/*<img src={char.char_img} />*/}
+      <div className="character" onClick={handleClick}>
+        <div className="square">
+          <img className="pic" src={char.char_img} />
+        </div>
         {char.char_name}
       </div>
     );

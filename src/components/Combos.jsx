@@ -61,6 +61,7 @@ const Combos = ({ url, currentId }) => {
   } else {
     return (
       <div>
+        <h2>Combos</h2>
         {comboList.map((combo) => (
           <CombosItem
             url={url}
