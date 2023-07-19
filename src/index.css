@@ -150,4 +150,5 @@ button,
   color: white;
   font-family: "Calligraffitti";
   backdrop-filter: blur(1px);
+  z-index: -1;
 }
