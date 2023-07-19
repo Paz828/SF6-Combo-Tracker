@@ -3,7 +3,7 @@ const UpdateCombo = ({ updateCombo, fillComboForm }) => {
     fillComboForm();
     updateCombo("update");
   };
-  return <button onClick={handleClick}>Update Combo</button>;
+  return <button onClick={handleClick}>Update</button>;
 };
 
 export default UpdateCombo;

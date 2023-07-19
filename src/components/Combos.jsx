@@ -16,6 +16,7 @@ const Combos = ({ url, currentId }) => {
   });
 
   const resetComboData = () => {
+    console.log("reset");
     setComboFormData({
       combo_inputs: "",
       combo_dmg: "",
@@ -60,7 +61,7 @@ const Combos = ({ url, currentId }) => {
     );
   } else {
     return (
-      <div>
+      <div className="combos">
         <h2>Combos</h2>
         {comboList.map((combo) => (
           <CombosItem
@@ -75,12 +76,16 @@ const Combos = ({ url, currentId }) => {
             setComboList={setComboList}
           />
         ))}
-        <AddCombo
-          updateCombo={updateCombo}
-          setComboFormData={setComboFormData}
-          currentId={currentId}
-          formData={comboFormData}
-        />
+        <footer>
+          <AddCombo
+            updateCombo={updateCombo}
+            setComboFormData={setComboFormData}
+            currentId={currentId}
+            formData={comboFormData}
+            comboFormData={comboFormData}
+            resetComboData={resetComboData}
+          />
+        </footer>
       </div>
     );
   }

@@ -20,7 +20,7 @@ const DeleteCombo = ({ comboList, setComboList, combo, url }) => {
     setComboList(copyArr);
   };
 
-  return <button onClick={handleClick}>Delete Combo</button>;
+  return <button onClick={handleClick}>Delete</button>;
 };
 
 export default DeleteCombo;

@@ -66,16 +66,16 @@ const ComboInputForm = ({
   let value;
   switch (updateAdd) {
     case "update":
-      value = "Update Combo";
+      value = "Update";
       break;
 
     case "add":
-      value = "Add Combo";
+      value = "Add";
       break;
   }
 
   return (
-    <div>
+    <div className="combo-input-form">
       <form action="combos" onSubmit={handleSubmit}>
         <label htmlFor="combo_inputs">Inputs</label>
         <input
@@ -98,8 +98,11 @@ const ComboInputForm = ({
           value={formData.combo_resources}
           onChange={handleChange}
         />
-        <input type="submit" value={value} />
+        <input type="submit" className="button" value={value} />
       </form>
+      <div className="combo-img">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.6gHAIF_zThkBbFKScsbBWgHaEK&pid=Api" />
+      </div>
     </div>
   );
 };

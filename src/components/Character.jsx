@@ -16,13 +16,13 @@ const Character = ({
 
   if (focus.currentCharacter) {
     return (
-      <div>
-        <div>
+      <div className="focused-container">
+        <div className="focused-character">
           {focus.currentCharacter}
           <div>
             <img src={focus.currentImg} />
           </div>
-          <div>
+          <div className="focus-character-btns">
             <UpdateCharacter
               bringUpUpdateForm={bringUpUpdateForm}
               focus={focus}

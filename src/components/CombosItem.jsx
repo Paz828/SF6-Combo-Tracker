@@ -20,24 +20,28 @@ const CombosItem = ({
 
   if (currentId === combo.char_id) {
     return (
-      <div>
-        <p>Inputs: {combo.combo_inputs}</p>
-        <p>Damage: {combo.combo_dmg}</p>
-        <p>Resources: {combo.combo_resources}</p>
-        <UpdateCombo
-          setComboFormData={setComboFormData}
-          fillComboForm={fillComboForm}
-          updateCombo={updateCombo}
-          combo={combo}
-          currentId={currentId}
-          formData={formData}
-        />
-        <DeleteCombo
-          setComboList={setComboList}
-          url={url}
-          combo={combo}
-          comboList={comboList}
-        />
+      <div className="combo-item">
+        <div>
+          <p>Inputs: {combo.combo_inputs}</p>
+          <p>Damage: {combo.combo_dmg}</p>
+          <p>Resources: {combo.combo_resources}</p>
+        </div>
+        <div className="combo-btns">
+          <UpdateCombo
+            setComboFormData={setComboFormData}
+            fillComboForm={fillComboForm}
+            updateCombo={updateCombo}
+            combo={combo}
+            currentId={currentId}
+            formData={formData}
+          />
+          <DeleteCombo
+            setComboList={setComboList}
+            url={url}
+            combo={combo}
+            comboList={comboList}
+          />
+        </div>
       </div>
     );
   }

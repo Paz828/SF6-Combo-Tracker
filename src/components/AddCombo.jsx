@@ -1,5 +1,14 @@
-const AddCombo = ({ updateCombo, setComboFormData, currentId, formData }) => {
+const AddCombo = ({
+  updateCombo,
+  setComboFormData,
+  currentId,
+  formData,
+  resetComboData,
+  comboFormData,
+}) => {
   const handleClick = () => {
+    resetComboData();
+    console.log(formData);
     setComboFormData({ ...formData, char_id: currentId });
     updateCombo("add");
   };
