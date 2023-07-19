@@ -8,7 +8,7 @@ const AddCombo = ({
 }) => {
   const handleClick = () => {
     resetComboData();
-    console.log(formData);
+    console.log();
     setComboFormData({ ...formData, char_id: currentId });
     updateCombo("add");
   };

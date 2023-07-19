@@ -89,7 +89,7 @@ const CharacterInputForm = ({
             value={formData.char_img}
             onChange={handleChange}
           />
-          <input type="submit" value={value} />
+          <input className="button" type="submit" value={value} />
         </form>
       </div>
       <div className="preview-container">
